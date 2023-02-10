@@ -1,3 +1,14 @@
-.div {
-  width: 37.5px;
+body {
+  background-color: #ededed;
+  font-size: 16px!important;
+}
+.container .van-nav-bar__content {
+  background-color: #0498ff;
+}
+.container .van-nav-bar__content .van-nav-bar__title {
+  color: #fff;
+  font-size: 15px;
+}
+.container .van-nav-bar__content .van-nav-bar__arrow {
+  color: #fff !important;
 }
