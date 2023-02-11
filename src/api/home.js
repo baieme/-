@@ -6,3 +6,12 @@ export const channel = ()=>{
     method:'get'
   })
 }
+
+//频道新闻推荐
+export const recommand = (params)=>{
+  return request({
+    url:"v1_0/articles",
+    method:'get',
+    params
+  })
+}

@@ -1,13 +1,13 @@
 <template>
   <div class="home">
-    <van-nav-bar>
+    <van-nav-bar fixed>
       <template #title>
         <van-button icon="search" @click="search" round class="btn" size="large"
           >搜索</van-button
         >
       </template>
     </van-nav-bar>
-    <van-tabs v-model="active" animated swipeable>
+    <van-tabs v-model="active" animated swipeable class="tab-content">
       <van-tab v-for="item in channelList" :key="item.id" :title="item.name">
         <List :message="item" />
       </van-tab>
@@ -45,6 +45,8 @@ export default {
 <style lang="less" scoped>
 @navColor: #0498ff;
 .home {
+  // padding-top:96px;
+  padding-bottom:50px;
   .van-nav-bar {
     height: 50px;
     background: @navColor!important;
@@ -62,12 +64,16 @@ export default {
       }
     }
   }
-  /deep/ .van-tabs__content--animated {
-    position: fixed !important;
-    overflow: auto;
-    width: 100%;
-    top: 96px;
-    bottom: 50px;
+  /deep/ .tab-content {
+    .van-tabs__wrap {
+      position: fixed;
+      top: 51px;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      bottom: 82px;
+    }
+
   }
 }
 </style>
