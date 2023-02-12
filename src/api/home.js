@@ -15,3 +15,29 @@ export const recommand = (params)=>{
     params
   })
 }
+
+// 获取全部频道列表
+export const allVideo = ()=>{
+  return request({
+    url:"/v1_0/channels",
+    method:'get'
+  })
+}
+
+// 增加用户频道
+export const add = (channel)=>{
+  return request({
+    url:"v1_0/user/channels",
+    method:'PATCH',
+    data:{channel}
+  })
+}
+
+
+//删除用户频道
+export const delChannel=(id)=>{
+  return request({
+    url:`v1_0/user/channels/${id}`,
+    method:'DELETE'
+  })
+}
