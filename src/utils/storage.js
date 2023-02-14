@@ -11,7 +11,6 @@ export const getItem = item=>{
   }catch(err){
     return value;
   }
-
 }
 
 export const setItem = (item,value)=>{

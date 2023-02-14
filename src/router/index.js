@@ -29,6 +29,10 @@ const routes = [
         component:()=>import('@/views/layout/video/index.vue')
       },
     ]
+  },
+  {
+    path:'/search',
+    component:()=>import('@/views/search/index.vue')
   }
 ]
 

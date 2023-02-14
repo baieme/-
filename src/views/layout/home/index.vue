@@ -65,7 +65,9 @@ export default {
 
       console.log(this.channelList);
     },
-    search() {},
+    search() {
+      this.$router.push('/search');
+    },
     go() {
       this.show = true;
     },

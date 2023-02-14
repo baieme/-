@@ -139,9 +139,8 @@ export default {
       } else {
         console.log(i);
         this.currentIndex = i
-        this.$emit('current',this.currentIndex)
-        this.$emit('list',this.commandChannel)
-
+        this.$emit('current',this.currentIndex);
+        this.$emit('list',this.commandChannel);
       }
     },
   },
