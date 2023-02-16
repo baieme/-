@@ -18,7 +18,7 @@
 
         <!-- <div >123123</div> -->
         <div slot="title">{{userList.name}}</div>
-        <van-button type="default" round size="small">编辑资料</van-button>
+        <van-button type="default" round size="small" @click="$router.push('/user/pro')">编辑资料</van-button>
       </van-cell>
       <van-grid :border="false" class="data-info" center>
         <van-grid-item text="头条">

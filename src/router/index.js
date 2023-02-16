@@ -33,6 +33,17 @@ const routes = [
   {
     path:'/search',
     component:()=>import('@/views/search/index.vue')
+  },
+  {
+    path:'/detail/:id',
+    name:'detail',
+    component:()=>import('@/views/detail/detail.vue'),
+    props:true
+  },
+  {
+    path:'/user/pro',
+    name:'user',
+    component:()=>import('@/views/user/index.vue')
   }
 ]
 

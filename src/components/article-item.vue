@@ -1,7 +1,7 @@
 <template>
   <div class="article">
-    <van-cell-group :border="false" v-if="value.cover.type === 0">
-      <van-cell :border="false">
+    <van-cell-group :border="false" v-if="value.cover.type === 0" >
+      <van-cell :border="false" :to="{name:'detail',params:{id:value.art_id}}">
         <div slot="title">{{ value.title }}</div>
         <div slot="label">
           <div class="bottom">
@@ -16,7 +16,7 @@
       </van-cell>
     </van-cell-group>
     <van-cell-group :border="false" v-if="value.cover.type == 3">
-      <van-cell :border="false">
+      <van-cell :border="false" :to="{name:'detail',params:{id:value.art_id}}">
         <div slot="title">{{ value.title }}</div>
         <div slot="label">
           <div class="content">
@@ -36,7 +36,7 @@
       </van-cell>
     </van-cell-group>
     <van-cell-group :border="false" v-if="value.cover.type == 1">
-      <van-cell :border="false">
+      <van-cell :border="false" :to="{name:'detail',params:{id:value.art_id}}">
         <div slot="title">{{ value.title }}</div>
         <div slot="label">
           <div class="bottom">
@@ -102,6 +102,7 @@ export default {
       &:not(:last-child) {
         margin-right: 5px;
       }
+      height: 66px;
       .van-image {
         width: 100%;
         height: 100%;
